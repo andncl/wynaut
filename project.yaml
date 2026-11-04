@@ -1,0 +1,29 @@
+# Project settings: shared by everyone in the campaign, and committed.
+# Paths that differ between machines (data_root, ...) go in config.yaml instead.
+#
+# This file is set up for the bundled demo (python -m tools.make_demo): a
+# fictional low-temperature lab whose cryostat logs its mixing-chamber
+# thermometer once a minute. Replace the values with your own project's.
+
+timezone: Australia/Sydney    # IANA name: local time of the sensor logs, and of the
+                              # months, dates and milestones in the run tracker
+
+index:                        # which databases under data_root are indexed (wynaut/index.py)
+  exclude: []                 # glob patterns on top of "*avg*" and "*unmerged*", e.g. "mock*.db"
+  read_with_wal: []           # databases read together with their unmerged WAL (slow)
+
+sensor:                       # optional: one logged quantity attached to every run (wynaut/sensors.py)
+  label: Fridge temperature   # shown in the run tracker
+  unit: K
+  channel: CH6 T              # read from <folder>/<YY-MM-DD>/<channel> <YY-MM-DD>.log
+  folder: sensor_logs         # under data_root
+  nearest_within_s: 120       # runs shorter than the log interval take the nearest reading
+  below_range:                # optional: what stands in where the sensor logs nothing
+    channel: CH6 R            #   the thermometer's resistance, logged even below its calibration
+    at_least: 12800           #   a resistance of 12.8 kOhm or more ...
+    value: 0.007              #   ... means 7 mK or colder, the end of the calibration
+
+tracker:                      # optional: colour scale of the run tracker's sensor tab
+  sensor_max: 3.0             # 0 (blue) to 3 K (red), in sensor_steps steps
+  sensor_steps: 10
+  sensor_ignore_above: 4.0    # warmer runs are shown as "no reading"

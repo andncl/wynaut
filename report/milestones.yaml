@@ -1,0 +1,12 @@
+# Events shown in the right-hand column of the run tracker (python -m tools.timeline).
+# One entry per event; date in the project's timezone (project.yaml), with or without a time.
+# The entries below belong to the demo campaign (python -m tools.make_demo).
+
+- date: 2026-03-02
+  text: Cooldown 1 with sample_a
+- date: 2026-04-11 09:00
+  text: Warm-up to swap sample_a for sample_b
+- date: 2026-04-18 09:00
+  text: Cooldown 2 with sample_b
+- date: 2026-05-06
+  text: Sensor logger off for two days

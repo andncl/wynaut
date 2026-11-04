@@ -1,0 +1,114 @@
+{
+  "analysis": "decay_vs_field",
+  "kwargs": {},
+  "runs": [
+    {
+      "label": "B_0p00T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 94,
+      "guid": "f8c494d3-7544-cebf-3e29-db35e4201613",
+      "modified_dimension": "field_T",
+      "value": 0.0,
+      "kwargs": {}
+    },
+    {
+      "label": "B_0p18T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 95,
+      "guid": "e77d3699-b85e-4882-e449-7a38f0954f63",
+      "modified_dimension": "field_T",
+      "value": 0.1818,
+      "kwargs": {}
+    },
+    {
+      "label": "B_0p36T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 96,
+      "guid": "77197aab-c23e-35dc-49e8-a804cf955497",
+      "modified_dimension": "field_T",
+      "value": 0.3636,
+      "kwargs": {}
+    },
+    {
+      "label": "B_0p55T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 97,
+      "guid": "f54f65a9-ea5f-1586-3193-95bbbfbe5b90",
+      "modified_dimension": "field_T",
+      "value": 0.5455,
+      "kwargs": {}
+    },
+    {
+      "label": "B_0p73T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 98,
+      "guid": "4151fcb3-0714-99e8-3f77-e472cd5a79dd",
+      "modified_dimension": "field_T",
+      "value": 0.7273,
+      "kwargs": {}
+    },
+    {
+      "label": "B_0p91T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 99,
+      "guid": "523cb258-9d88-490b-dac2-57f7f9ea4efb",
+      "modified_dimension": "field_T",
+      "value": 0.9091,
+      "kwargs": {}
+    },
+    {
+      "label": "B_1p09T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 100,
+      "guid": "6b1d80f5-a8de-eb35-3001-8706aec00386",
+      "modified_dimension": "field_T",
+      "value": 1.0909,
+      "kwargs": {}
+    },
+    {
+      "label": "B_1p27T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 101,
+      "guid": "c36fe688-c996-c130-02aa-93ce5803b278",
+      "modified_dimension": "field_T",
+      "value": 1.2727,
+      "kwargs": {}
+    },
+    {
+      "label": "B_1p45T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 102,
+      "guid": "d936d9c2-3a59-1ecd-53ba-4376ff625f89",
+      "modified_dimension": "field_T",
+      "value": 1.4545,
+      "kwargs": {}
+    },
+    {
+      "label": "B_1p64T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 103,
+      "guid": "5a56652f-9e2a-1449-5fe9-03d14d33964b",
+      "modified_dimension": "field_T",
+      "value": 1.6364,
+      "kwargs": {}
+    },
+    {
+      "label": "B_1p82T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 104,
+      "guid": "691b3fb2-ad00-72be-e8d7-38c503392b76",
+      "modified_dimension": "field_T",
+      "value": 1.8182,
+      "kwargs": {}
+    },
+    {
+      "label": "B_2p00T",
+      "db": "setup_a/cooldown_2.db",
+      "run_id": 105,
+      "guid": "eb69d4dd-d124-548a-3e8f-302be96c83db",
+      "modified_dimension": "field_T",
+      "value": 2.0,
+      "kwargs": {}
+    }
+  ]
+}

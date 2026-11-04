@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "analysis",
+    "kwargs",
+    "runs"
+  ],
+  "properties": {
+    "analysis": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "kwargs": {
+      "type": "object"
+    },
+    "runs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "db",
+          "run_id",
+          "guid",
+          "modified_dimension",
+          "value",
+          "kwargs"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]+$"
+          },
+          "db": {
+            "type": "string",
+            "pattern": "^[^/\\\\:][^\\\\:]*\\.db$"
+          },
+          "run_id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "guid": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+          },
+          "modified_dimension": {
+            "type": ["string", "null"],
+            "pattern": "^[a-z][A-Za-z0-9_]*$"
+          },
+          "value": {
+            "type": ["number", "null"]
+          },
+          "kwargs": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# Runs marked by hand in the run tracker (python -m tools.timeline). A mark wins
+# over everything the tracker works out from selections and outputs.
+#
+#   mark   paper         standout run for the paper figures (purple)
+#          failed        failed measurement (red)
+#          not_relevant  good run, not relevant for the analysis (blue)
+#   db     path relative to DATA_ROOT, as in the run index
+#   runs   run ids, single or as "first-last" ranges
+#   note   optional, shown when hovering the run
+#
+# The entries below belong to the demo campaign (python -m tools.make_demo).
+
+- mark: not_relevant
+  db: setup_a/cooldown_2.db
+  runs: ["1-23"]
+  note: room-temperature noise checks during the warm-up
+- mark: not_relevant
+  db: setup_a/cooldown_1.db
+  runs: ["133-147"]
+  note: readout calibration
+- mark: failed
+  db: setup_a/cooldown_1.db
+  runs: ["266-268"]
+  note: wrong attenuation on the readout line
+- mark: paper
+  db: setup_a/cooldown_2.db
+  runs: [176]
+  note: example sweep point for Fig. 2

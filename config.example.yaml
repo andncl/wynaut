@@ -1,0 +1,10 @@
+# Copy to config.yaml (gitignored) and set where the shared drive is mounted on
+# your machine. Paths in selection files and in the run index are relative to
+# data_root. Project-wide settings (timezone, sensor logs) are in project.yaml.
+#
+# To try the framework on the fictional demo campaign instead:
+#   python -m tools.make_demo && export WYNAUT_CONFIG=demo/config.yaml
+data_root: /mnt/share/my_campaign/data          # measurement databases and sensor logs, read-only
+averaged_root: /mnt/share/my_campaign/averaged  # averaged copies, written only by the maintainer export
+output_root: /mnt/share/my_campaign/outputs     # analysis outputs, written only by run_analysis
+# The run index is not configured here: it is committed to the repo at index/runs.jsonl.

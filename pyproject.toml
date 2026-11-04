@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wynaut"
+version = "0.1.0"
+description = "An agentic approach to collaborative analysis of scattered measurement data"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Andreas Nickl" }]
+requires-python = ">=3.10"
+keywords = ["data analysis", "llm agents", "collaboration", "laboratory", "qcodes", "reproducibility"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "xarray",
+    "netCDF4",
+    "jsonschema",
+    "pyyaml",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupytext"]
+
+[tool.setuptools.packages.find]
+include = ["wynaut*", "analysis*"]
+
+[tool.setuptools.package-data]
+wynaut = ["selection.schema.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

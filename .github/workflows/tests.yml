@@ -1,0 +1,29 @@
+# The data-free checks on every push and pull request: selection files against
+# the committed run index, PLAN.md, the analysis base classes, the index and
+# sensor-log readers, and the run tracker. Needs no access to the shared drive.
+# Also builds the run tracker of the committed index as an artifact.
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev]"
+      - run: pytest
+      - run: python -m tools.timeline
+      - uses: actions/upload-artifact@v4
+        if: matrix.python-version == '3.12'
+        with:
+          name: run-tracker
+          path: build/tracker/runs.html
