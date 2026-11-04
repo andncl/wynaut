@@ -39,3 +39,4 @@ wynaut = ["selection.schema.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]   # the repo root, so tests import tools/ and analysis/ as in the repo
